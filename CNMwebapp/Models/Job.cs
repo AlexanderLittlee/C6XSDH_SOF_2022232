@@ -15,6 +15,8 @@ namespace CNMwebapp.Models
 
         public Worker[] Workers { get; set; }
 
+        public string OwnerId { get; set; }
+
         public Job()
         {
             Uid = Guid.NewGuid().ToString();
