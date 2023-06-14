@@ -1,4 +1,6 @@
 ﻿using CNMwebapp.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,10 +8,12 @@ namespace CNMwebapp.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(UserManager<IdentityUser> userManager, ILogger<HomeController> logger)
         {
+            _userManager = userManager;
             _logger = logger;
         }
 
@@ -18,8 +22,11 @@ namespace CNMwebapp.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        [Authorize]
+        public async Task<IActionResult> Privacy()
         {
+            var principal = this.User;
+            var user = await _userManager.GetUserAsync(principal);
             return View();
         }
 
