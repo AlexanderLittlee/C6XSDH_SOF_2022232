@@ -20,6 +20,9 @@ namespace CNMwebapp.Models
 
         public string OwnerId { get; set; }
 
+        [NotMapped]
+        public virtual Worker Owner{ get; set; }
+
         public Job()
         {
             Uid = Guid.NewGuid().ToString();
