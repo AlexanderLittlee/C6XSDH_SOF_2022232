@@ -6,7 +6,7 @@ namespace CNMwebapp.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
-        public DbSet<Worker> Workers { get; set; }
+        public DbSet<Worker> Users { get; set; }
         public DbSet<Job> Jobs { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)

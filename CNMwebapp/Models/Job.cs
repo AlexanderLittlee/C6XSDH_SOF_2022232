@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CNMwebapp.Models
 {
@@ -14,6 +15,7 @@ namespace CNMwebapp.Models
 
         public int WorkersNeeded { get; set; }
 
+        [NotMapped]
         public Worker[] Workers { get; set; }
 
         public string OwnerId { get; set; }
