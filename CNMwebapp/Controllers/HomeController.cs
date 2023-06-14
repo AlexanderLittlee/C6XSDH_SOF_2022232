@@ -30,7 +30,7 @@ namespace CNMwebapp.Controllers
         {
             var principal = this.User;
             var user = await _userManager.GetUserAsync(principal);
-            return View();
+            return View(user);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
