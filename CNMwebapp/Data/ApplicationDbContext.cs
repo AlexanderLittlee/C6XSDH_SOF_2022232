@@ -1,13 +1,18 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using CNMwebapp.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace CNMwebapp.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
+        public DbSet<Worker> Workers { get; set; }
+        public DbSet<Job> Jobs { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
+
+
     }
 }
