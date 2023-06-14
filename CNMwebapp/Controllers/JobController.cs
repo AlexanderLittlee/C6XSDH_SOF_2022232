@@ -18,6 +18,13 @@ namespace CNMwebapp.Controllers
             _db = db;
         }
 
+
+
+        public IActionResult Index()
+        {
+            return RedirectToAction("Home", "Index", new { area = "" });
+        }
+
         public ActionResult Create()
         {
             return View();
@@ -29,7 +36,7 @@ namespace CNMwebapp.Controllers
             job.OwnerId =  _userManager.GetUserId(this.User);
             _db.Jobs.Add(job); 
             _db.SaveChanges();
-            return RedirectToAction("Home", "Index");
+            return RedirectToAction("Home", "Index", new { area = "" });
         }
 
 
