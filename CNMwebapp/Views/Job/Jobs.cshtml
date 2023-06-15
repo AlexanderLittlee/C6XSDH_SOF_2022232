@@ -1,21 +1,9 @@
 ﻿@model IEnumerable<CNMwebapp.Models.Job>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Worker> SignInManager
+@inject UserManager<Worker> UserManager
 
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>List</title>
-</head>
-<body>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<table class="table" border="1" >
     <thead>
         <tr>
             <th>
@@ -34,7 +22,7 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+    @foreach (var item in Model.OrderBy(x=>x.Start)) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -46,15 +34,21 @@
                 @Html.DisplayFor(modelItem => item.End)
             </td>
             <td>
+                
                 @Html.DisplayFor(modelItem => item.WorkersNeeded)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Uid">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Uid">Delete</a>
+                    @if (item.OwnerId == UserManager.GetUserId(User))
+                    {
+                        <a href="Delete?jobid=@item.Uid" >Delete</a>
+                    }
+                    else
+                    {
+                        <a href="SignUp?userid=@UserManager.GetUserId(User)&jobid=@item.Uid">Sign up</a>
+                    }
             </td>
         </tr>
 }
     </tbody>
 </table>
-</body>
-</html>
+

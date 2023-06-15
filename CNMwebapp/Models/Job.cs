@@ -16,7 +16,7 @@ namespace CNMwebapp.Models
         public int WorkersNeeded { get; set; }
 
         [NotMapped]
-        public Worker[] Workers { get; set; }
+        public List<Worker> Workers { get; set; }
 
         public string OwnerId { get; set; }
 
@@ -26,7 +26,7 @@ namespace CNMwebapp.Models
         public Job()
         {
             Uid = Guid.NewGuid().ToString();
-            Workers = new Worker[WorkersNeeded];
+            Workers = new List<Worker>(WorkersNeeded);
         }
     }
 }

@@ -24,7 +24,7 @@ namespace CNMwebapp.Controllers
         [Authorize]
         public IActionResult Jobs()
         {
-            return View();
+            return View(_db.Jobs);
         }
 
         [Authorize]
@@ -32,7 +32,6 @@ namespace CNMwebapp.Controllers
         {
             return View();
         }
-
 
         [Authorize]
         [HttpPost]
@@ -44,5 +43,33 @@ namespace CNMwebapp.Controllers
             return RedirectToAction(nameof(Jobs));
         }
 
+     
+        public ActionResult SignUp(string userid, string jobid)
+        {
+            var job = _db.Jobs.FirstOrDefault(x=>x.Uid==jobid);
+            var user = _db.Users.FirstOrDefault(x=>x.Id==userid);
+
+            if (user != null && job != null 
+                && job.Workers.Count() < job.WorkersNeeded
+                && !job.Workers.Contains(user)) 
+            {
+                job.Workers.Add(user);  
+                _db.SaveChanges();
+            }
+            
+            return RedirectToAction(nameof(Jobs));
+        }
+
+
+        public ActionResult Delete(string jobid)
+        {
+            var job= _db.Jobs.FirstOrDefault(j=>j.Uid==jobid);
+            if(job!=null)
+            {
+                _db.Jobs.Remove(job);
+                _db.SaveChanges();
+            }
+            return RedirectToAction(nameof(Jobs));
+        }
     }
 }
