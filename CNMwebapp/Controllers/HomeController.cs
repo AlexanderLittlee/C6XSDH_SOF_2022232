@@ -13,17 +13,21 @@ namespace CNMwebapp.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _db;
 
+
         public HomeController(UserManager<Worker> userManager, ILogger<HomeController> logger, ApplicationDbContext db)
         {
             _userManager = userManager;
             _logger = logger;
             _db = db;
+
         }
+
 
         public IActionResult Index()
         {
             return View(_db.Jobs);
         }
+
 
         [Authorize]
         public async Task<IActionResult> Privacy()
@@ -32,6 +36,7 @@ namespace CNMwebapp.Controllers
             var user = await _userManager.GetUserAsync(principal);
             return View(user);
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

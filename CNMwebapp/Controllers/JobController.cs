@@ -53,7 +53,8 @@ namespace CNMwebapp.Controllers
                 && job.Workers.Count() < job.WorkersNeeded
                 && !job.Workers.Contains(user)) 
             {
-                job.Workers.Add(user);  
+                job.Workers.Add(user);
+                user.Schedule.Add(job);
                 _db.SaveChanges();
             }
             

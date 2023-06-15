@@ -15,9 +15,29 @@
         </tr>
         <tr>
             <td>Drivers' licence</td>
-            <td>@Model.DriversLicence</td>
+            <td>
+                @if (Model.DriversLicence==true)
+                {
+                    @:yes
+                }
+                else
+                {
+                    @:no
+                }
+            </td>
         </tr>
     </table>
    
 </div>
+
+<style>
+    body {
+        background-color: darkolivegreen;
+    }
+
+    h1, h2, td {
+        color: gold;
+    }
+</style>
+
 

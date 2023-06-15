@@ -22,7 +22,8 @@
         </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model.OrderBy(x=>x.Start)) {
+        @foreach (var item in Model.OrderBy(x => x.Start))
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -44,11 +45,19 @@
                     }
                     else
                     {
-                        <a href="SignUp?userid=@UserManager.GetUserId(User)&jobid=@item.Uid">Sign up</a>
+                        <a href="SignUp?userid=@UserManager.GetUserId(User)&jobid=@item.Uid" class="btn btn-warning">Sign up</a>
                     }
             </td>
         </tr>
 }
     </tbody>
 </table>
+<style>
+    body{
+        background-color: darkolivegreen;
+    }
+    th, td{
+       color: gold; 
+    }
+</style>
 
