@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Worker>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Worker> SignInManager
+@inject UserManager<Worker> UserManager
+
+<ul>
+    @foreach (var user in Model)
+    {
+        <li>
+            @user.Name @user.Age 
+            @if (await UserManager.IsInRoleAsync(user, "Admin"))
+            {
+                <a class="btn btn-danger" href="/Home/RemoveAdmin?uid=@user.Id">Remove Admin Rights</a>
+            }
+            else
+            {
+                <a class="btn btn-success" href="/Home/GrantAdmin?uid=@user.Id">Grant Admin Rights</a>
+            }
+        </li>
+    }
+</ul>
+
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                Drivers' licence
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.OrderBy(x => x.Name))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => user.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => user.Age)
+                </td>
+                <td>
+                    @if (user.DriversLicence)
+                    {
+                        @: Yes
+                    }
+                    else
+                    {
+                        @: No
+                    }
+                </td>
+                <td>
+                    <a href="Delete?jobid=@user.Id" class="btn btn-danger">Sign up</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<style>
+    body {
+        background-color: darkolivegreen;
+    }
+
+    th, td {
+        color: gold;
+    }
+</style>
+

@@ -13,7 +13,7 @@ namespace CNMwebapp.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _db;
 
-
+        
         public HomeController(UserManager<Worker> userManager, ILogger<HomeController> logger, ApplicationDbContext db)
         {
             _userManager = userManager;
@@ -21,7 +21,6 @@ namespace CNMwebapp.Controllers
             _db = db;
 
         }
-
 
         public IActionResult Index()
         {

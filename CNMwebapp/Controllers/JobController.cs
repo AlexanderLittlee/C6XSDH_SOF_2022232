@@ -44,7 +44,7 @@ namespace CNMwebapp.Controllers
             _db.SaveChanges();
             return RedirectToAction(nameof(Jobs));
         }
-        //itt beállítva a uid megmarad, a workers null lesz ha legközelebb hívom
+        
      
         public ActionResult SignUp(string userid, string jobid)
         {

@@ -3,7 +3,7 @@
 @inject SignInManager<Worker> SignInManager
 @inject UserManager<Worker> UserManager
 
-<table class="table" border="1" >
+<table class="table" border="1">
     <thead>
         <tr>
             <th>
@@ -21,29 +21,30 @@
     <tbody>
         @foreach (var item in Model.OrderBy(x => x.Date))
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WorkersNeeded)
-            </td>
-            <td>
-                <a href="SignUp?userid=@UserManager.GetUserId(User)&jobid=@item.Uid" class="btn btn-warning">Sign up</a>
-            </td>
-        </tr>
-}
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WorkersNeeded)
+                </td>
+                <td>
+                    <a href="Delete?jobid=@item.Uid" class="btn btn-danger">Sign up</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
 <style>
-    body{
+    body {
         background-color: darkolivegreen;
     }
-    th, td{
-       color: gold; 
+
+    th, td {
+        color: gold;
     }
 </style>
 
