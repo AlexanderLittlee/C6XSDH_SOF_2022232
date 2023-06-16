@@ -13,11 +13,8 @@ namespace CNMwebapp.Models
         public bool DriversLicence { get; set; }
 
         [NotMapped]
-        public List<Job> Schedule { get; set; }
+        public  List<Job> Schedule { get; set; }
 
-        public Worker()
-        {
-            Schedule = new List<Job>();
-        }
+        
     }
 }

@@ -123,6 +123,7 @@ namespace CNMwebapp.Areas.Identity.Pages.Account
                 user.Name = Input.Name;
                 user.Age = Input.Age;
                 user.DriversLicence = Input.DriversLicence;
+                user.Schedule = new List<Job>();
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);

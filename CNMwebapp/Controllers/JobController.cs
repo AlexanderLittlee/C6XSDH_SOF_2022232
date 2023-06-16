@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CNMwebapp.Controllers
 {
@@ -37,12 +38,13 @@ namespace CNMwebapp.Controllers
         [HttpPost]
         public ActionResult Create(Job job)
         {
-            job.OwnerId =  _userManager.GetUserId(this.User);
+            job.Uid = Guid.NewGuid().ToString();
+            job.Workers = new List<Worker>(job.WorkersNeeded);
             _db.Jobs.Add(job); 
             _db.SaveChanges();
             return RedirectToAction(nameof(Jobs));
         }
-
+        //itt beállítva a uid megmarad, a workers null lesz ha legközelebb hívom
      
         public ActionResult SignUp(string userid, string jobid)
         {

@@ -10,10 +10,7 @@
                 Job
             </th>
             <th>
-                Start
-            </th>
-            <th>
-                End
+                Date
             </th>
             <th>
                 Workers
@@ -22,24 +19,21 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.OrderBy(x => x.Start))
+        @foreach (var item in Model.OrderBy(x => x.Date))
         {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Start)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.End)
+                @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
                 
                 @Html.DisplayFor(modelItem => item.WorkersNeeded)
             </td>
             <td>
-                    @if (item.OwnerId == UserManager.GetUserId(User))
+                    @if (1==0)
                     {
                         <a href="Delete?jobid=@item.Uid" >Delete</a>
                     }

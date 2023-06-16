@@ -15,13 +15,9 @@ namespace CNMwebapp.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Job>()
-                .HasOne(t => t.Owner)
-                .WithMany()
-                .HasForeignKey(t => t.OwnerId)
-                .OnDelete(DeleteBehavior.Cascade);
-
             base.OnModelCreating(builder);
+
+            
         }
 
     }

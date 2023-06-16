@@ -10,23 +10,12 @@ namespace CNMwebapp.Models
 
         public string Name { get; set; }
 
-        public DateTime Start { get; set; }
-        public DateTime End { get; set; }
-
+        public DateTime Date { get; set; }
+        
         public int WorkersNeeded { get; set; }
 
         [NotMapped]
-        public List<Worker> Workers { get; set; }
+        public  List<Worker> Workers { get; set; }
 
-        public string OwnerId { get; set; }
-
-        [NotMapped]
-        public virtual Worker Owner{ get; set; }
-
-        public Job()
-        {
-            Uid = Guid.NewGuid().ToString();
-            Workers = new List<Worker>(WorkersNeeded);
-        }
     }
 }
