@@ -15,7 +15,7 @@ namespace CNMwebapp.Models
         public int WorkersNeeded { get; set; }
 
         [NotMapped]
-        public  List<Worker> Workers { get; set; }
+        public  ICollection<Worker> Workers { get; set; }
 
     }
 }
