@@ -3,23 +3,7 @@
 @inject SignInManager<Worker> SignInManager
 @inject UserManager<Worker> UserManager
 
-<ul>
-    @foreach (var user in Model)
-    {
-        <li>
-            @user.Name @user.Age 
-            @if (await UserManager.IsInRoleAsync(user, "Admin"))
-            {
-                <a class="btn btn-danger" href="/Home/RemoveAdmin?uid=@user.Id">Remove Admin Rights</a>
-            }
-            else
-            {
-                <a class="btn btn-success" href="/Home/GrantAdmin?uid=@user.Id">Grant Admin Rights</a>
-            }
-        </li>
-    }
-</ul>
-
+<h1>Manage users</h1>
 <table class="table" border="1">
     <thead>
         <tr>
@@ -32,7 +16,10 @@
             <th>
                 Drivers' licence
             </th>
-            <th></th>
+            <th>
+                Admin actions
+            </th>
+            
         </tr>
     </thead>
     <tbody>
@@ -56,8 +43,21 @@
                     }
                 </td>
                 <td>
-                    <a href="Delete?jobid=@user.Id" class="btn btn-danger">Sign up</a>
+                    @if (await UserManager.IsInRoleAsync(user, "Admin"))
+                    {
+                        <a class="btn btn-danger" href="/Home/RemoveAdmin?uid=@user.Id">Remove Admin Rights</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-success" href="/Home/GrantAdmin?uid=@user.Id">Grant Admin Rights</a>
+                    }
+
+                    @if(user.Id != UserManager.GetUserId(User))
+                    {
+                        <a href="DeleteUser?id=@user.Id" class="btn btn-danger">Delete user</a>
+                    }
                 </td>
+                
             </tr>
         }
     </tbody>
@@ -67,8 +67,13 @@
         background-color: darkolivegreen;
     }
 
-    th, td {
+    h1{
         color: gold;
+    }
+
+    th, td{
+        color: gold;
+        font-size:large;
     }
 </style>
 

@@ -28,23 +28,6 @@ namespace CNMwebapp.Controllers
             return View(_db.Jobs);
         }
 
-        [Authorize]
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        [Authorize]
-        [HttpPost]
-        public ActionResult Create(Job job)
-        {
-            job.Uid = Guid.NewGuid().ToString();
-            job.Workers = new List<Worker>(job.WorkersNeeded);
-            _db.Jobs.Add(job); 
-            _db.SaveChanges();
-            return RedirectToAction(nameof(Jobs));
-        }
-        
      
         public ActionResult SignUp(string userid, string jobid)
         {
@@ -64,15 +47,6 @@ namespace CNMwebapp.Controllers
         }
 
 
-        public ActionResult Delete(string jobid)
-        {
-            var job= _db.Jobs.FirstOrDefault(j=>j.Uid==jobid);
-            if(job!=null)
-            {
-                _db.Jobs.Remove(job);
-                _db.SaveChanges();
-            }
-            return RedirectToAction(nameof(Jobs));
-        }
+       
     }
 }

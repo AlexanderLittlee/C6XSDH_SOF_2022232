@@ -3,6 +3,9 @@
 @inject SignInManager<Worker> SignInManager
 @inject UserManager<Worker> UserManager
 
+    <h1>
+        Manage jobs
+    </h1>
 <table class="table" border="1">
     <thead>
         <tr>
@@ -32,19 +35,25 @@
                     @Html.DisplayFor(modelItem => item.WorkersNeeded)
                 </td>
                 <td>
-                    <a href="Delete?jobid=@item.Uid" class="btn btn-danger">Sign up</a>
+                    <a href="DeleteJob?jobid=@item.Uid" class="btn btn-danger">Delete job</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<a href="CreateJob" class="btn btn-success">Create job</a>
 <style>
     body {
         background-color: darkolivegreen;
     }
 
+    h1 {
+        color: gold;
+    }
+
     th, td {
         color: gold;
+        font-size: large;
     }
 </style>
 

@@ -44,7 +44,7 @@ namespace CNMwebapp.Controllers
 
             await _userManager.AddToRoleAsync(user, "Admin");
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(JobManager));
         }
 
 
@@ -78,6 +78,49 @@ namespace CNMwebapp.Controllers
                 await _userManager.AddToRoleAsync(user, "Admin");
             }
 
+            return RedirectToAction(nameof(UserManager));
+        }
+
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult CreateJob()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        public ActionResult CreateJob(Job job)
+        {
+            job.Uid = Guid.NewGuid().ToString();
+            job.Workers = new List<Worker>(job.WorkersNeeded);
+            _db.Jobs.Add(job);
+            _db.SaveChanges();
+            return RedirectToAction(nameof(JobManager));
+        }
+
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult DeleteJob(string jobid)
+        {
+            var job = _db.Jobs.FirstOrDefault(j => j.Uid == jobid);
+            if (job != null)
+            {
+                _db.Jobs.Remove(job);
+                _db.SaveChanges();
+            }
+            return RedirectToAction(nameof(JobManager));
+        }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult DeleteUser(string id)
+        {
+            var user = _db.Users.FirstOrDefault(u => u.Id == id);
+            if (user != null)
+            {
+                _db.Users.Remove(user);
+                _db.SaveChanges();
+            }
             return RedirectToAction(nameof(UserManager));
         }
     }
