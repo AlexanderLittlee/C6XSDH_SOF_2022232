@@ -1,0 +1,87 @@
+﻿@model Worker
+
+<div class="text-center">
+    <br />
+    <h2>Personal data</h2>
+    <table border="1" align="center">
+        <tr>
+            <td>Name</td>
+            <td>@Model.Name</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>@Model.Age</td>
+        </tr>
+        <tr>
+            <td>Drivers' licence</td>
+            <td>
+                @if (Model.DriversLicence==true)
+                {
+                    @:yes
+                }
+                else
+                {
+                    @:no
+                }
+            </td>
+        </tr>
+    </table>
+    <br /><br /><br />
+    <h4>Schedule</h4>
+    <table class="table" border="1">
+        <thead>
+            <tr>
+                <th>
+                    Job
+                </th>
+                <th>
+                    Date
+                </th>
+                <th>
+                    Workers needed in total
+                </th>
+                <th>
+                    Workers signed up
+                </th>
+                <th>
+                    Action
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Schedule.OrderBy(x=>x.Date))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WorkersNeeded)
+                    </td>
+                    <td>
+                        @item.Workers.Count()
+                    </td>
+                    <td>
+                        <a href="Storno?userid=@Model.Id&jobid=@item.Uid" class="btn btn-danger">Storno</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    body {
+        background-color: darkolivegreen;
+    }
+
+    h1, h2, h4, th, td {
+        color: gold;
+    }
+</style>
+
+

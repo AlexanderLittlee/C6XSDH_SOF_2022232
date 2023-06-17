@@ -43,11 +43,13 @@ namespace CNMwebapp.Controllers
             return RedirectToAction(nameof(JobManager));
         }
 
+
         [Authorize(Roles = "Admin")]
         public IActionResult JobManager()
         {
             return View(_db.Jobs);
         }
+
 
         [Authorize(Roles = "Admin")]
         public IActionResult UserManager()
@@ -69,6 +71,7 @@ namespace CNMwebapp.Controllers
             return RedirectToAction(nameof(UserManager));
         }
 
+
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GrantAdmin(string uid)
         {
@@ -88,6 +91,7 @@ namespace CNMwebapp.Controllers
         {
             return View();
         }
+
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
@@ -112,6 +116,7 @@ namespace CNMwebapp.Controllers
             }
             return RedirectToAction(nameof(JobManager));
         }
+
 
         [Authorize(Roles = "Admin")]
         public ActionResult DeleteUser(string id)
