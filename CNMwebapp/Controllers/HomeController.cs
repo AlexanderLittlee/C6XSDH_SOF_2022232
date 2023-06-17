@@ -19,23 +19,15 @@ namespace CNMwebapp.Controllers
             _userManager = userManager;
             _logger = logger;
             _db = db;
-
         }
 
         public IActionResult Index()
         {
-            return View(_db.Jobs);
+            return View();
         }
 
 
-        [Authorize]
-        public async Task<IActionResult> Privacy()
-        {
-            var principal = this.User;
-            var user = await _userManager.GetUserAsync(principal);
-            return View(user);
-        }
-
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

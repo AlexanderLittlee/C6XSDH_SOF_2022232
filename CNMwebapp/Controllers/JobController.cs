@@ -1,4 +1,5 @@
 ﻿using CNMwebapp.Data;
+using CNMwebapp.Logic;
 using CNMwebapp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -13,13 +14,22 @@ namespace CNMwebapp.Controllers
 
         private readonly UserManager<Worker> _userManager;
         private readonly ApplicationDbContext _db;
+        private readonly IJobLogic _logic = new JobLogic();
 
         public JobController(UserManager<Worker> userManager, ApplicationDbContext db)
         {
             _userManager = userManager;
             _db = db;
+          
         }
 
+        [Authorize]
+        public async Task<IActionResult> Schedule()
+        {
+            var principal = this.User;
+            var user = await _userManager.GetUserAsync(principal);
+            return View(user);
+        }
 
 
         [Authorize]
@@ -33,10 +43,9 @@ namespace CNMwebapp.Controllers
         {
             var job = _db.Jobs.FirstOrDefault(x=>x.Uid==jobid);
             var user = _db.Users.FirstOrDefault(x=>x.Id==userid);
+            bool canSignUp = _logic.SignUpPossible(job, user);
 
-            if (user != null && job != null 
-                && job.Workers.Count() < job.WorkersNeeded
-                && !job.Workers.Contains(user)) 
+            if (canSignUp) 
             {
                 job.Workers.Add(user);
                 user.Schedule.Add(job);
@@ -46,7 +55,23 @@ namespace CNMwebapp.Controllers
             return RedirectToAction(nameof(Jobs));
         }
 
+        public ActionResult Storno(string userid, string jobid)
+        {
+            var job = _db.Jobs.FirstOrDefault(x => x.Uid == jobid);
+            var user = _db.Users.FirstOrDefault(x => x.Id == userid);
+            bool canStorno = _logic.StornoPossible(job, user);
 
-       
+            if (canStorno)
+            {
+                job.Workers.Remove(user);
+                user.Schedule.Remove(job);
+                _db.SaveChanges();
+            }
+
+            return RedirectToAction(nameof(Schedule));
+        }
+
+
+
     }
 }
