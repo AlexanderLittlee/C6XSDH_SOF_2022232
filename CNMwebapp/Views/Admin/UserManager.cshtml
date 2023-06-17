@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Worker>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Worker> SignInManager
+@inject UserManager<Worker> UserManager
+
+<h1>Manage users</h1>
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                Drivers' licence
+            </th>
+            <th>
+                Admin actions
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.OrderBy(x => x.Name))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => user.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => user.Age)
+                </td>
+                <td>
+                    @if (user.DriversLicence)
+                    {
+                        @: Yes
+                    }
+                    else
+                    {
+                        @: No
+                    }
+                </td>
+                <td>
+                    @if (await UserManager.IsInRoleAsync(user, "Admin"))
+                    {
+                        <a class="btn btn-danger" href="/Home/RemoveAdmin?uid=@user.Id">Remove Admin Rights</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-success" href="/Home/GrantAdmin?uid=@user.Id">Grant Admin Rights</a>
+                    }
+
+                    @if(user.Id != UserManager.GetUserId(User))
+                    {
+                        <a href="DeleteUser?id=@user.Id" class="btn btn-danger">Delete user</a>
+                    }
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+<style>
+    body {
+        background-color: darkolivegreen;
+    }
+
+    h1{
+        color: gold;
+    }
+
+    th, td{
+        color: gold;
+        font-size:large;
+    }
+</style>
+

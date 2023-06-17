@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CNMwebapp.Models.Job>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Worker> SignInManager
+@inject UserManager<Worker> UserManager
+
+    <h1>
+        Manage jobs
+    </h1>
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>
+                Job
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Workers
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderBy(x => x.Date))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WorkersNeeded)
+                </td>
+                <td>
+                    <a href="DeleteJob?jobid=@item.Uid" class="btn btn-danger">Delete job</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="CreateJob" class="btn btn-success">Create job</a>
+<style>
+    body {
+        background-color: darkolivegreen;
+    }
+
+    h1 {
+        color: gold;
+    }
+
+    th, td {
+        color: gold;
+        font-size: large;
+    }
+</style>
+
