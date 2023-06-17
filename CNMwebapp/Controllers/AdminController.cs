@@ -22,11 +22,7 @@ namespace CNMwebapp.Controllers
             _roleManager = roleManager;
         }
 
-        [Authorize(Roles = "Admin")]
-        public IActionResult JobManager()
-        {
-            return View(_db.Jobs);
-        }
+       
 
         public async Task<IActionResult> DelegateAdmin()
         {
@@ -47,6 +43,11 @@ namespace CNMwebapp.Controllers
             return RedirectToAction(nameof(JobManager));
         }
 
+        [Authorize(Roles = "Admin")]
+        public IActionResult JobManager()
+        {
+            return View(_db.Jobs);
+        }
 
         [Authorize(Roles = "Admin")]
         public IActionResult UserManager()
