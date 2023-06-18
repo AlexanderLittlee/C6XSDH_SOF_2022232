@@ -7,24 +7,27 @@ namespace CNMwebapp.Logic
     {
         public bool SignUpPossible(Job job, Worker worker)
         {
-            if (worker != null &&
-               job != null &&
-               job.Workers.Count() < job.WorkersNeeded &&
-               !job.Workers.Contains(worker))
-                return true;
-            else
-                return false;
+            return worker != null
+                   && job != null
+                   && job.Workers.Count() < job.WorkersNeeded
+                   && !job.Workers.Contains(worker);
         }
 
         public bool StornoPossible(Job job, Worker worker)
         {
-            if (worker != null &&
-                job != null &&
-                worker.Schedule.Contains(job) &&
-                job.Workers.Contains(worker))
-                return true;
-            else
-                return false;
+            return worker != null
+                   && job != null
+                   && worker.Schedule.Contains(job)
+                   && job.Workers.Contains(worker)
+                   && CheckThreeDayDifference(job.Date);
+        }
+
+
+        public bool CheckThreeDayDifference(DateTime date)
+        {
+            DateTime currendDate = DateTime.Now;
+            TimeSpan difference = date - currendDate;
+            return difference.TotalDays >= 3;
         }
     }
 }
