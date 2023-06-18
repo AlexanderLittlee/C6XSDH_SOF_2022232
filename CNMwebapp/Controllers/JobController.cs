@@ -41,7 +41,9 @@ namespace CNMwebapp.Controllers
             {
                 if (_logic.CheckExpiredJobs(job))
                     _db.Jobs.Remove(job);
+                
             }
+            _db.SaveChanges();
             return View(_db.Jobs);
         }
 
