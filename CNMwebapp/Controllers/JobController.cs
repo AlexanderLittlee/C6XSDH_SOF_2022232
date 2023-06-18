@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Microsoft.EntityFrameworkCore;
 
 namespace CNMwebapp.Controllers
@@ -28,6 +29,7 @@ namespace CNMwebapp.Controllers
         {
             var principal = this.User;
             var user = await _userManager.GetUserAsync(principal);
+            _logic.CheckExpiredJobs(user.Schedule, user);
             return View(user);
         }
 
@@ -35,6 +37,11 @@ namespace CNMwebapp.Controllers
         [Authorize]
         public IActionResult Jobs()
         {
+            foreach (var job in _db.Jobs)
+            {
+                if (_logic.CheckExpiredJobs(job))
+                    _db.Jobs.Remove(job);
+            }
             return View(_db.Jobs);
         }
 
@@ -67,6 +74,8 @@ namespace CNMwebapp.Controllers
                 user.Schedule.Remove(job);
                 _db.SaveChanges();
             }
+            
+
 
             return RedirectToAction(nameof(Schedule));
         }

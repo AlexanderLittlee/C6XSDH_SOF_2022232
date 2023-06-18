@@ -16,8 +16,6 @@
             <th>
                 Workers needed / signed up
             </th>
-           
-            
             <th>
                 Action
             </th>
@@ -37,9 +35,8 @@
             <td>
                 @Html.DisplayFor(modelItem => item.WorkersNeeded) / @item.Workers.Count()
             </td>
-           
             <td>
-                <a href="SignUp?userid=@UserManager.GetUserId(User)&jobid=@item.Uid" class="btn btn-warning">Sign up</a>
+                <a href="SignUp?userid=@UserManager.GetUserId(User)&jobid=@item.Uid" class="btn btn-warning">SIGN UP</a>
             </td>
         </tr>
 }

@@ -1,4 +1,5 @@
 ﻿using CNMwebapp.Data;
+using CNMwebapp.Logic;
 using CNMwebapp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -13,6 +14,7 @@ namespace CNMwebapp.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _db;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IJobLogic _logic = new JobLogic();
 
         public AdminController(UserManager<Worker> userManager, ILogger<HomeController> logger, ApplicationDbContext db, RoleManager<IdentityRole> roleManager)
         {
@@ -99,8 +101,11 @@ namespace CNMwebapp.Controllers
         {
             job.Uid = Guid.NewGuid().ToString();
             job.Workers = new List<Worker>(job.WorkersNeeded);
-            _db.Jobs.Add(job);
-            _db.SaveChanges();
+            if(_logic.CheckValidDate(job.Date))
+            {
+                _db.Jobs.Add(job);
+                _db.SaveChanges();
+            }
             return RedirectToAction(nameof(JobManager));
         }
 
