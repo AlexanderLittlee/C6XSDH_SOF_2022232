@@ -16,7 +16,7 @@
                 Date
             </th>
             <th>
-                Workers
+                Workers needed / signed up
             </th>
             <th></th>
         </tr>
@@ -32,7 +32,7 @@
                     @Html.DisplayFor(modelItem => item.Date)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.WorkersNeeded)
+                    @Html.DisplayFor(modelItem => item.WorkersNeeded) / @item.Workers.Count()
                 </td>
                 <td>
                     <a href="DeleteJob?jobid=@item.Uid" class="btn btn-danger">Delete job</a>

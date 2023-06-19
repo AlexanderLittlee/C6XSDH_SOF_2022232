@@ -45,413 +45,413 @@ namespace CNMwebapp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Uid = "c94681db-6c76-4db3-ad22-4bcf892faa17",
+                            Uid = "10adc16a-9fca-456a-bce8-435298817b28",
                             Date = new DateTime(2023, 6, 26, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Balaton Sound",
                             WorkersNeeded = 6
                         },
                         new
                         {
-                            Uid = "83f8d57c-7776-4dc9-a947-7dc08fc7eb04",
+                            Uid = "25261447-9333-4536-99bb-200b4803bb86",
                             Date = new DateTime(2023, 6, 27, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Balaton Sound",
                             WorkersNeeded = 6
                         },
                         new
                         {
-                            Uid = "2506cb9e-d954-432c-8ce0-c286bc6e1e0e",
+                            Uid = "532d7bd7-36ac-487f-a9e3-fadf48b56153",
                             Date = new DateTime(2023, 6, 28, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Balaton Sound",
                             WorkersNeeded = 6
                         },
                         new
                         {
-                            Uid = "8d66581b-14cf-4552-bb0f-fd7f57d54222",
+                            Uid = "3d313a87-a7c2-4873-a3d4-d8916e5b10eb",
                             Date = new DateTime(2023, 6, 29, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Balaton Sound",
                             WorkersNeeded = 6
                         },
                         new
                         {
-                            Uid = "fd68479f-f351-4de7-9006-7c10135ff761",
+                            Uid = "cb898df4-5154-4fd2-8cbd-5274690bcca4",
                             Date = new DateTime(2023, 6, 30, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Balaton Sound",
                             WorkersNeeded = 6
                         },
                         new
                         {
-                            Uid = "b448f253-629c-44ac-a5c5-9a4ca140012d",
+                            Uid = "7c8bb217-230d-4c28-9198-56f858114469",
                             Date = new DateTime(2023, 7, 1, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Balaton Sound",
                             WorkersNeeded = 6
                         },
                         new
                         {
-                            Uid = "329ed365-3ca8-4506-a01b-6e0644e1d9d0",
+                            Uid = "581e5152-e99c-431f-89a0-0a6da050988c",
                             Date = new DateTime(2023, 7, 10, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "dbaef5c0-0894-41c7-be61-47de30ef75bb",
+                            Uid = "2d14d68a-4eaf-440e-ad4b-c9e50fbd3b1f",
                             Date = new DateTime(2023, 7, 11, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "3c8dee3f-3b14-4d12-92d9-0de8247a8883",
+                            Uid = "ab61b92f-dee6-45e9-b6b0-c45b05f5712f",
                             Date = new DateTime(2023, 7, 12, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "d749cd00-5832-4cae-a9a4-af36c81012b0",
+                            Uid = "47306c21-4b63-471a-84fc-d35209c084aa",
                             Date = new DateTime(2023, 7, 13, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "689ee8e2-494a-4b8a-9b66-59b31e432918",
+                            Uid = "44075001-be05-4983-820d-8e1fb99d14ab",
                             Date = new DateTime(2023, 7, 14, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "addcaa53-5607-407d-b0cd-85b5b76d191d",
+                            Uid = "cd9f28cd-f8e9-4693-a405-6c3a0766410d",
                             Date = new DateTime(2023, 7, 15, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "9e14ae2f-e84a-4e21-90a1-116cff1bfd34",
+                            Uid = "de8b72dd-716e-4f7e-914d-12e9e7ee00ae",
                             Date = new DateTime(2023, 7, 16, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "c7805efa-f3a6-4e90-930e-24d26c18b0ae",
+                            Uid = "5e90c301-c21c-4538-be6b-01634ff5bebe",
                             Date = new DateTime(2023, 7, 17, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "b4eb0bbf-1e6c-4e96-93b1-fdc5d22d8ade",
+                            Uid = "81dfe6c3-03d5-470a-94f8-18da7a69d1a7",
                             Date = new DateTime(2023, 7, 18, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "b031413c-5c85-44e7-a5a5-864156f425a1",
+                            Uid = "12194d4c-a059-46e4-9f57-e9c724b084a0",
                             Date = new DateTime(2023, 7, 19, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "0daca6a7-ff28-4242-ba9b-304cfa4df2b1",
+                            Uid = "3f45a272-34ff-4249-a072-506196d4539a",
                             Date = new DateTime(2023, 7, 20, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "cc082745-4759-4182-aa76-48f8965745b7",
+                            Uid = "3bb85fd8-e60a-46ed-b525-fdfc5158afbe",
                             Date = new DateTime(2023, 7, 21, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "9cee3e8b-da52-49dd-8063-26787c8f7119",
+                            Uid = "b0f1056b-0ddd-4b4c-9863-6f162620c2d4",
                             Date = new DateTime(2023, 7, 22, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "11ecbd72-6fd0-4ea3-a8c3-e1ed2302217b",
+                            Uid = "512b2599-8832-4c6b-a37c-6d1ab6b5efdb",
                             Date = new DateTime(2023, 7, 23, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "2bf2cc34-e31a-4318-8f36-dd0765769c05",
+                            Uid = "49a306b2-c6f8-4ed5-b6f2-16aea3ed5861",
                             Date = new DateTime(2023, 7, 24, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "db39369b-080f-437b-9690-f61e51539063",
+                            Uid = "be727dc2-c071-4d03-a9f3-6c41b0a4f749",
                             Date = new DateTime(2023, 7, 25, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "b0963d59-b0d4-4364-84b0-cb8ff5702069",
+                            Uid = "84759a4d-0c74-4794-bc91-121c3d8ffe8e",
                             Date = new DateTime(2023, 7, 26, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "574b4e7e-898a-4a08-9384-c1391517d7dd",
+                            Uid = "2280d6cb-9ef3-4052-b8d9-9e61d349df47",
                             Date = new DateTime(2023, 7, 27, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "aee36bcf-f5f5-419d-8f4a-d054aa784a67",
+                            Uid = "49c1492a-d894-4483-aceb-1817694cac23",
                             Date = new DateTime(2023, 7, 28, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "c3dfe418-00fd-488e-bd0b-ff68448d2191",
+                            Uid = "19387016-d758-4bfd-ae0a-27006f99cb8d",
                             Date = new DateTime(2023, 7, 29, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "ad2428af-91ac-49f9-8ccc-6a77d0b5c57f",
+                            Uid = "5dc54852-d99e-4d2a-a4bd-0d02ea00919f",
                             Date = new DateTime(2023, 7, 30, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "d160173f-d19d-496c-bf56-47c6cb259eae",
+                            Uid = "ea6d5c59-45a5-4c9c-b72b-4435ae1648e0",
                             Date = new DateTime(2023, 7, 31, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "d4451f30-0103-4b80-89d2-c7b06a267e98",
+                            Uid = "7e2284f8-992a-4188-ad15-712e866ea8a5",
                             Date = new DateTime(2023, 8, 1, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "52d1b7c1-f4db-4da0-871a-acb4cd80380b",
+                            Uid = "b9c80b72-ab84-4542-9994-019fe113c261",
                             Date = new DateTime(2023, 8, 2, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "8afc6d83-7e85-4db8-be1c-0111a99e7e09",
+                            Uid = "3c1231d9-03dd-45ad-959a-0ddf37c2ed3a",
                             Date = new DateTime(2023, 8, 3, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "ab13b3a6-ca39-4cf4-bf67-6f24fc8514ce",
+                            Uid = "cadf257b-ce75-475d-b517-4e95dc312027",
                             Date = new DateTime(2023, 8, 4, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "ed50dd9c-fb33-4389-8636-f273707dccd3",
+                            Uid = "bf29f5a2-e238-4de2-833d-457ac97824a8",
                             Date = new DateTime(2023, 8, 5, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "2ef24374-60b5-476b-9a19-d74daff46b96",
+                            Uid = "b983d979-e171-4cf7-b2ba-98a9188c3f83",
                             Date = new DateTime(2023, 8, 6, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "6338c9f9-95f7-43a3-bc9d-5c5cf712a104",
+                            Uid = "c40667da-664a-469a-88d3-da835874e7df",
                             Date = new DateTime(2023, 8, 7, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "af52012d-29b9-4684-b8c1-516330aa2091",
+                            Uid = "aafb37ac-c9ca-4715-a86e-958e7e268942",
                             Date = new DateTime(2023, 8, 8, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "7982b9b0-7a55-4290-bac2-7f4804214c78",
+                            Uid = "a7d4f944-81dc-411d-8561-566181e7cbb1",
                             Date = new DateTime(2023, 8, 9, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "83db01cb-530f-40f1-ab41-7ae40509947a",
+                            Uid = "13ea41db-40f9-4676-90e6-71daeac10a98",
                             Date = new DateTime(2023, 8, 10, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "bee3e114-0c72-46dd-bb79-90a365b9d534",
+                            Uid = "7b81d4d4-a797-4510-aa30-f35eeb2e290b",
                             Date = new DateTime(2023, 8, 11, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "880e0215-7558-4348-bbe7-25daf0625741",
+                            Uid = "33208927-8c4d-44a5-88ff-86c33db5d780",
                             Date = new DateTime(2023, 8, 12, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "13089067-26fe-436d-986d-54f14209932a",
+                            Uid = "5a1652dc-b087-49b9-82a3-741868a44e07",
                             Date = new DateTime(2023, 8, 13, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "83f75cb3-b671-48ae-b9fc-32776407d196",
+                            Uid = "5d475ed8-5c4b-4bf2-86ae-df2d3da7ff3a",
                             Date = new DateTime(2023, 8, 14, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "c93cd2a5-82c9-4c1d-8ec2-080defee8d36",
+                            Uid = "091b8d0f-e417-4d21-8a45-43761ea11301",
                             Date = new DateTime(2023, 8, 15, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "34cefd03-d722-42a8-ad51-9f096395ff35",
+                            Uid = "13d6b17e-0bb1-4891-9fc9-10b514edbf3b",
                             Date = new DateTime(2023, 8, 16, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "c803cb89-f08e-4921-b0a9-b8fbad409216",
+                            Uid = "22de8a26-c7d1-4425-a846-66ccbaf47b16",
                             Date = new DateTime(2023, 8, 17, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Sziget",
                             WorkersNeeded = 8
                         },
                         new
                         {
-                            Uid = "deb45ae8-a09e-40ad-8d72-60aa771db235",
+                            Uid = "59afb0a7-bd4e-4e67-b144-08389a2f6657",
                             Date = new DateTime(2023, 8, 18, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "20.-i tüzijáték",
                             WorkersNeeded = 5
                         },
                         new
                         {
-                            Uid = "cc2277e2-fb65-4ce0-b82e-57ce03d08fe1",
+                            Uid = "9d84aca1-5154-414a-acb9-6e956c1d1b1a",
                             Date = new DateTime(2023, 8, 19, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "20.-i tüzijáték",
                             WorkersNeeded = 5
                         },
                         new
                         {
-                            Uid = "43a21341-4d2c-49ef-a6e3-5cbdc7ef054f",
+                            Uid = "b699567f-c2de-4c80-824d-e2e2c08775ad",
                             Date = new DateTime(2023, 8, 20, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "20.-i tüzijáték",
                             WorkersNeeded = 5
                         },
                         new
                         {
-                            Uid = "4387f9ee-5077-4bf7-8260-8007b42fa8d1",
+                            Uid = "85211770-6587-43c0-a6b4-1b071e41b506",
                             Date = new DateTime(2023, 8, 21, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "fb8aac58-ecc6-41fc-badd-6cc0e054bda3",
+                            Uid = "881e9c87-3a6d-4e98-b165-539ddf613e31",
                             Date = new DateTime(2023, 8, 22, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "0dcbac84-0922-4751-8145-23bb2dfd2ce8",
+                            Uid = "320f4bd1-409c-40f6-a2b7-8733b01d8f98",
                             Date = new DateTime(2023, 8, 23, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "325c440c-acd3-49c0-8e4b-17eaefd74017",
+                            Uid = "1d171540-e3bf-4e14-9e6d-e124a71e6f5a",
                             Date = new DateTime(2023, 8, 24, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "6bf62fd7-d5f8-4034-b7e2-10d375319246",
+                            Uid = "33d17d4a-4995-4a4f-adcc-7a477fa8b98c",
                             Date = new DateTime(2023, 8, 25, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "4b61fde1-9772-48a4-af3d-97cdd3ae4205",
+                            Uid = "52fda7b0-76ac-4550-b075-cdd15137db7b",
                             Date = new DateTime(2023, 8, 26, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "c40a7466-82ca-4598-9dc4-427ba70440ba",
+                            Uid = "4408034e-3cfa-455d-89fc-5801e8955402",
                             Date = new DateTime(2023, 8, 27, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "d1590569-e1a6-4c84-a5ef-eadf73fda62e",
+                            Uid = "aa441c6a-1f88-4584-be71-9a12edbd857d",
                             Date = new DateTime(2023, 8, 28, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "2136e035-17b9-4b29-aa47-fdbd18341e93",
+                            Uid = "d130843e-c95c-413d-a760-61123aa83c0f",
                             Date = new DateTime(2023, 8, 29, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "6195e1cf-5c35-4ac3-8ed9-60d68e4c7de7",
+                            Uid = "0375dfbc-a332-4dea-bd08-efdc062a37ed",
                             Date = new DateTime(2023, 8, 30, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3
                         },
                         new
                         {
-                            Uid = "34acbdc3-8bfe-4d06-b6c2-8ba4ba8fe70a",
+                            Uid = "f14bcdbb-7aa1-4b33-9dd7-af4d53e195e3",
                             Date = new DateTime(2023, 8, 31, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Atlétikai VB",
                             WorkersNeeded = 3

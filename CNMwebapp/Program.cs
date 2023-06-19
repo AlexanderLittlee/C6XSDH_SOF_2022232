@@ -23,6 +23,12 @@ builder.Services.AddDefaultIdentity<Worker>(options =>
     }) 
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
+builder.Services.AddAuthentication().AddFacebook(opt =>
+{
+    opt.AppId = "184709101235238";
+    opt.AppSecret = "0af9121f93fea06c4c03974cb25e0b15";
+});
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
@@ -45,6 +51,8 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseStaticFiles();
 
 app.MapControllerRoute(
     name: "default",
