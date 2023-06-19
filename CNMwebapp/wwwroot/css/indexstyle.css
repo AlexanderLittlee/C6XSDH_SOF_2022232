@@ -1,0 +1,22 @@
+h1 {
+    font-weight: 900;
+    color: gold;
+}
+
+p, ul, h3 {
+    color: white;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+    .image-container img {
+        max-width: calc(100% / 3);
+    }
+
+body {
+    background-color: darkolivegreen;
+}

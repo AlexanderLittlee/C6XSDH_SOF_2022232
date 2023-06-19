@@ -49,12 +49,33 @@ namespace IdentityCore.Data
             };
 
             string password = "asdasdasd";
+            string kovipassword = "Almafa123";
 
             if (!await roleManager.RoleExistsAsync("Admin"))
                 await roleManager.CreateAsync(role);
 
 
             //-------------------------ADMINS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+            if (await userManager.FindByNameAsync("kovacs@andras.com") == null)
+            {
+                var user = new Worker
+                {
+                    UserName = "kovacs@andras.com",
+                    Email = "kovacs@andras.com",
+                    PhoneNumber = GeneratePhoneNumber(),
+                    Name = "Kovács András",
+                    Age = 32,
+                    DriversLicence = true,
+                };
+
+                var result = await userManager.CreateAsync(user);
+                if (result.Succeeded)
+                {
+                    await userManager.AddPasswordAsync(user, kovipassword);
+                    await userManager.AddToRoleAsync(user, "Admin");
+                }
+            }
 
             if (await userManager.FindByNameAsync("wimmer@gabor.com") == null)
             {

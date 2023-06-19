@@ -3,6 +3,9 @@
 @inject SignInManager<Worker> SignInManager
 @inject UserManager<Worker> UserManager
 
+<head>
+    <link rel="stylesheet" href="~/css/listerstyle.css" />
+</head>
     <h1>
         Manage jobs
     </h1>
@@ -42,18 +45,5 @@
     </tbody>
 </table>
 <a href="CreateJob" class="btn btn-success">Create job</a>
-<style>
-    body {
-        background-color: darkolivegreen;
-    }
 
-    h1 {
-        color: gold;
-    }
-
-    th, td {
-        color: gold;
-        font-size: large;
-    }
-</style>
 

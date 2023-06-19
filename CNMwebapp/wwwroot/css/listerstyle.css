@@ -1,0 +1,12 @@
+body {
+    background-color: darkolivegreen;
+}
+
+h1, h2, h4,  .row{
+    color: gold;
+}
+
+th, td {
+    color: gold;
+    font-size: large;
+}

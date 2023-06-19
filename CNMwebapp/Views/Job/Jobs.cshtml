@@ -3,6 +3,10 @@
 @inject SignInManager<Worker> SignInManager
 @inject UserManager<Worker> UserManager
 
+
+<head>
+    <link rel="stylesheet" href="~/css/listerstyle.css"/>
+</head>
     <h1>List of available jobs</h1>
 <table class="table" border="1" >
     <thead>
@@ -42,18 +46,4 @@
 }
     </tbody>
 </table>
-<style>
-    body{
-        background-color: darkolivegreen;
-    }
-
-    h1 {
-        color: gold;
-    }
-
-    th, td {
-        color: gold;
-        font-size: large;
-    }
-</style>
 

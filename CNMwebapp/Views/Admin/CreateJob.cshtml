@@ -1,44 +1,43 @@
 ﻿@model CNMwebapp.Models.Job
 
 
-<h1>Create new Job</h1>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="CreateJob">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<head>
+    <link rel="stylesheet" href="~/css/listerstyle.css" />
+
+</head>
+<body>
+
+    <h1>Create new Job</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="CreateJob">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
                 <div class="form-group">
-                    <label asp-for="Date" class="control-label"></label>
-                    <input asp-for="Date" class="form-control" />
-                    <span asp-validation-for="Date" class="text-danger"></span>
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
-            <div class="form-group">
-                <label asp-for="WorkersNeeded" class="control-label"></label>
-                <input asp-for="WorkersNeeded" class="form-control" />
-                <span asp-validation-for="WorkersNeeded" class="text-danger"></span>
-            </div>
+                    <div class="form-group">
+                        <label asp-for="Date" class="control-label"></label>
+                        <input asp-for="Date" class="form-control" />
+                        <span asp-validation-for="Date" class="text-danger"></span>
+                    </div>
+                <div class="form-group">
+                    <label asp-for="WorkersNeeded" class="control-label"></label>
+                    <input asp-for="WorkersNeeded" class="form-control" />
+                    <span asp-validation-for="WorkersNeeded" class="text-danger"></span>
+                </div>
             
-            <div class="form-group">
-                <input type="submit" value="Create Job" class="btn btn-primary" />
-                <a asp-action="JobManager" class="btn btn-danger">Back to List</a>
-                <a asp-controller="Home" asp-action="Index" class="btn btn-warning">Return to Home</a>
-            </div>
-        </form>
+                <div class="form-group">
+                    <input type="submit" value="Create Job" class="btn btn-primary" />
+                    <a asp-action="JobManager" class="btn btn-danger">Back to List</a>
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-warning">Return to Home</a>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<style>
-    body {
-        background-color: darkolivegreen;
-    }
+</body>
 
-    .row, h1{
-        color: gold;
-    }
-</style>

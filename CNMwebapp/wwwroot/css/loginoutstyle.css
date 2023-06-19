@@ -1,0 +1,12 @@
+﻿body {
+    background-color: darkolivegreen;
+}
+
+a {
+    text-decoration: none;
+    color: gold;
+}
+
+.col-md-6, .form-check, .checkbox, h1 {
+    color: gold;
+}
