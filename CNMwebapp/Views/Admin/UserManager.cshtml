@@ -17,6 +17,9 @@
                 Drivers' licence
             </th>
             <th>
+                Phone 
+            </th>
+            <th>
                 Admin actions
             </th>
             
@@ -41,6 +44,9 @@
                     {
                         @: No
                     }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => user.PhoneNumber)
                 </td>
                 <td>
                     @if (await UserManager.IsInRoleAsync(user, "Admin"))
