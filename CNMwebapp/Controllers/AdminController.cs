@@ -65,7 +65,7 @@ namespace CNMwebapp.Controllers
         {
             var user = _userManager.Users.FirstOrDefault(t => t.Id == uid);
 
-            if (user == null)
+            if (user != null)
             {
                 await _userManager.RemoveFromRoleAsync(user, "Admin");
             }
@@ -79,7 +79,7 @@ namespace CNMwebapp.Controllers
         {
             var user = _userManager.Users.FirstOrDefault(t => t.Id == uid);
 
-            if (user == null)
+            if (user != null)
             {
                 await _userManager.AddToRoleAsync(user, "Admin");
             }

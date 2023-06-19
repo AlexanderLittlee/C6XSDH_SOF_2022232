@@ -85,6 +85,10 @@ namespace CNMwebapp.Areas.Identity.Pages.Account
             [Display(Name = "Driver's licence")]
             public bool DriversLicence { get; set; }
 
+            [Required]
+            [Phone]
+            [Display(Name = "Phone number")]
+            public string PhoneNumber { get; set; }
 
             [Required]
             [EmailAddress]
@@ -123,6 +127,8 @@ namespace CNMwebapp.Areas.Identity.Pages.Account
                 user.Name = Input.Name;
                 user.Age = Input.Age;
                 user.DriversLicence = Input.DriversLicence;
+                user.PhoneNumber = Input.PhoneNumber;
+                user.Email= Input.Email;
                 user.Schedule = new List<Job>();
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
