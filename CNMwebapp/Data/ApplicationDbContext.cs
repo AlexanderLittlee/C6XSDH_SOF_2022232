@@ -1,4 +1,6 @@
 ﻿using CNMwebapp.Models;
+using IdentityCore.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -80,6 +82,8 @@ namespace CNMwebapp.Data
                 new Job(){Uid= Guid.NewGuid().ToString(),Name ="Atlétikai VB", Date=new DateTime(2023,8,31,7,15,0), WorkersNeeded=3, Workers=new List<Worker>(3)}
             };
 
+
+
             base.OnModelCreating(builder);
 
             builder.Entity<Job>()
@@ -98,7 +102,6 @@ namespace CNMwebapp.Data
                           .OnDelete(DeleteBehavior.Cascade)
                 );
 
-           //valamiért nem adódik hozzá a dbhez a seedelt data
 
             builder.Entity<Job>().HasData(jobs);
         }
