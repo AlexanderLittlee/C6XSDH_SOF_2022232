@@ -327,6 +327,16 @@ namespace IdentityCore.Data
                     await userManager.AddPasswordAsync(user, password);
             }
 
+
+            if (await userManager.FindByNameAsync("sandorkiss642@gmail.com") != null)
+            {
+                var user = context.Users.FirstOrDefault(u => u.UserName== "sandorkiss642@gmail.com");
+                if (user != null)
+                {
+                    context.Users.Remove(user);
+                    context.SaveChanges();
+                }
+            }
         }
     }
 }

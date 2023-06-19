@@ -84,14 +84,32 @@ namespace CNMwebapp.Areas.Identity.Pages.Account
             /// </summary>
             [Required]
             [EmailAddress]
+            [Display(Name = "Email")]
             public string Email { get; set; }
 
             [Required]
             [StringLength(100)]
             [Display(Name = "Full name")]
             public string Name { get; set; }
+            
+            [Required]
+            [Range(18, 100)]
+            [Display(Name = "Age")]
+            public int Age { get; set; }
+
+            [Required]
+            [Display(Name = "Driver's licence")]
+            public bool DriversLicence { get; set; }
+
+            [Required]
+            [Phone]
+            [Display(Name = "Phone number")]
+            public string PhoneNumber { get; set; }
+
+            
+
         }
-        
+
         public IActionResult OnGet() => RedirectToPage("./Login");
 
         public IActionResult OnPost(string provider, string returnUrl = null)
@@ -160,6 +178,10 @@ namespace CNMwebapp.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
                 user.Name = Input.Name;
+                user.Email = Input.Email;
+                user.Age = Input.Age;
+                user.DriversLicence = Input.DriversLicence;
+                user.PhoneNumber = Input.PhoneNumber;
                 
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);

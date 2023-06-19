@@ -14,7 +14,7 @@ namespace CNMwebapp.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _db;
         private readonly RoleManager<IdentityRole> _roleManager;
-
+        private static bool firstRun=true;
 
         public HomeController(UserManager<Worker> userManager, ILogger<HomeController> logger, ApplicationDbContext db, RoleManager<IdentityRole> roleManager)
         {
@@ -26,7 +26,11 @@ namespace CNMwebapp.Controllers
 
         public IActionResult Index()
         {
-            DummyData.Initialize(_db, _userManager, _roleManager).Wait();
+            if (firstRun)
+            {
+                DummyData.Initialize(_db, _userManager, _roleManager).Wait();
+                firstRun = false;
+            }
             return View();
         }
   
